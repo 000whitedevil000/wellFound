@@ -43,6 +43,8 @@ header nav .right-nav-main{
 }
 .login-sign-up {
     margin: 0px 0px 0px 20px;
+    display: flex;
+
 }
 #login-button:hover{
     background-color: #00bfff;
@@ -149,4 +151,78 @@ header nav .right-nav-main{
 }
 ::placeholder{
     font-size: 16px;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+
+@media (max-width:991px) {
+    body{
+        margin: 20px;
+    }
+.hamburger{
+    display: block;
+}
+.right-nav{
+    display: none;
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(135deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.right-nav{
+        position: absolute;
+        right: 30%;
+        top: 90px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+}
+
+.login-sign-up{
+    display: block;
+    margin-top: 10px;
+    
+}
+
+.right-nav a{
+    font-family: 'Galano Classic', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+.right-nav.active{
+    display: flex;
+}
+.body-main h1 {
+    font-size: 40px;
+    color: rgb(1, 1, 39);
+}
+
 }
